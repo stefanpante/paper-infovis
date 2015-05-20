@@ -127,6 +127,9 @@ Another reason why we visualised the scores like this is to enable interaction w
 
 The draggable slider and the miniature version of the timeline are used to navigate throughout the years. This miniature version shows the time line as a whole, from the beginning to the end without sideways scrolling. This provides an overview for the user. The miniature version has not the goal to already provide all the information to the user, but it rather is an incentive for the user to explore certain periods. It could for example trigger the user to drag the slider to the start of some driver’s career when exploring the end of it. The start could have same peaks which the user did not remark on the selected period of the main timeline.  The miniature version only shows the bars of the non selected drivers and selected drivers in the corresponding colors as the main timeline. The bars are not navigable in the navigator and are not hoverable either. This in order to reduce interference when navigating throughout the years. A miss click when selecting a new year would trigger the change driver scenario which may be unwanted. 
 
+\subsubsection{Alternatives}
+An alternative for showing all the bar charts in the navigator is replacing these by the line charts of the selected drivers. This will not show good performances of non-selected drivers since it will only focus on the careers of the selected ones. We show a mock-up of this navigator in figure [REF] and compare it with our version in figure [REF]. We believe this alternative duplicates less shown data, but withholds the user valuable information to help him exploring the data e.g. peak performances of non selected drivers will not be visible.
+
 \subsection{Comparing two drivers}
 
 The user can compare two drivers based on their finishing positions. In order to get an overview, the user clicks on part of a bar, as described above. Now the number of times the driver has finished first, second and third pops up. When the user clicks on another part of a bar, the same statistics are placed next to the statistics of the first driver. In this way, one can simply compare the performances of the two drivers. When the users clicks another part of a bar, the driver that was selected first will disappear and be replaced by the last selected.
@@ -142,6 +145,17 @@ For each place (first, second and third), the number achieved is visualised usin
 
 Points vs wins [MSS TOCH EVENTJE VOOR CHANGE IN POINTSYSTEM TOEVOEGEN?]
 Note that point- systems are regularly changed. Therefore, this metric is not ideal to compare drivers in the main time line which competed in different periods. The amount of wins however is a metric which does not change in value. We believe that the statistics provide the context to interpret results of drivers and that they can be an incentive to change the view, as discussed in statistics. 
+
+\section{Lay Out}
+As shown in figure [INSERT REF] and as discussed in section [REF], our visualisation consists of three parts: The timeline, the navigator and the statistics. The navigator lies between the statistics and the timeline. Notice that the statistics are shown parallel one-on-one with the corresponding bar chart blocks. Thus the number of statistics blocks are equal to the number of bar chart blocks. The navigator has the role to summarize and give an overview of the carreers of the selected drivers. It does not have the role to show details, but can show significant raises and drops in the careers of the selected drivers. This gives the user the possiblity to remark these significant changes, even if the selected view does not cover the corresponding years. 
+
+The reason we put the navigator between the statistics and the timeline, has no hard foundation based on design patterns proposed and accepted by the information visualisation community. The design decission is based on the conceptual difference of the statistics and the timeline. The navigator splits these two parts. Furthermore, since we have the goal to visualize careers of drivers between 1950 and 2015 [TRUE?], the navigator has a central role in the visualition and we want to present it this way by centralizing it.
+
+This was not percepiated the same way by experts during the final presentation of this visualisation. Alternatives for the lay out are presented in figures [REFONE] and [REFTWO]. Figure [REFONE] respects gives rise to a more hierarchical, top down order in which the navigator presents the overview in miniature. Below the navigator, details are shown of the selected period. We present the statistics as information which provides context to the timeline, the backbone of our visualisation. It is also possible to put the timeline on the bottom of the visualisation, which breaks the hierarchical concept explained at first. This layout however separates the navigator from the timeline and the statistics, like the first alternative. 
+
+
+
+
 
 \section{Implementation} % (fold)
 \label{sec:implementation}
